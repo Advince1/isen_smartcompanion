@@ -15,11 +15,6 @@
         android:theme="@style/Theme.IsenSmartCompanion"
         tools:targetApi="31">
         <activity
-            android:name=".HistoryActivity"
-            android:exported="false"
-            android:label="@string/title_activity_history"
-            android:theme="@style/Theme.IsenSmartCompanion" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

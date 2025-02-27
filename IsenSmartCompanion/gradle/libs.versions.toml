@@ -1,6 +1,7 @@
 [versions]
 agp = "8.8.0"
 converterGson = "2.11.0"
+coreVersion = "2.2.0"
 firebaseBom = "33.9.0"
 generativeai = "0.9.0"
 kotlin = "2.0.0"
@@ -14,9 +15,13 @@ composeBom = "2024.04.01"
 activityKtx = "1.10.0"
 navigationRuntimeKtx = "2.8.7"
 navigationCompose = "2.8.7"
+roomRuntime = "2.6.1"
 
 [libraries]
+androidx-core = { module = "androidx.core:core", version.ref = "coreVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-vertexai = { module = "com.google.firebase:firebase-vertexai" }
@@ -38,6 +43,7 @@ androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", ve
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -6,6 +6,9 @@ import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -52,6 +55,7 @@ fun EventDetailScreen(eventId: String, title: String, description: String, date:
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
+        verticalArrangement = Arrangement.Center
     ) {
         Spacer(modifier = Modifier.height(20.dp))
         Text(
@@ -76,12 +80,35 @@ fun EventDetailScreen(eventId: String, title: String, description: String, date:
         Spacer(modifier = Modifier.height(8.dp))
         HorizontalDivider(color = Color.Black, thickness = 1.dp)
         Spacer(modifier = Modifier.height(8.dp))
-        Button(
-            onClick = { activity?.finish() },
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF800020), contentColor = Color.White),
-            modifier = Modifier.align(Alignment.CenterHorizontally)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text(text = "Back")
+            Button(
+                onClick = { activity?.finish() },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF800020),
+                    contentColor = Color.White
+                ),
+                modifier = Modifier.weight(1f)
+            ) {
+                Text(text = "Back")
+            }
+
+            Button(
+                onClick = { activity?.finish() },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF800020),
+                    contentColor = Color.White
+                ),
+                modifier = Modifier.weight(1f)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Notifications,
+                    contentDescription = "Notifications button",
+                )
+                Text(text = "Get Notified")
+            }
         }
     }
 }

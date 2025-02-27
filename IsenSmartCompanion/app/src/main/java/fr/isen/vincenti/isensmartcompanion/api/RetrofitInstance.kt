@@ -1,6 +1,5 @@
-package fr.isen.vincenti.isensmartcompanion
+package fr.isen.vincenti.isensmartcompanion.api
 
-import fr.isen.vincenti.isensmartcompanion.api.EventService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
